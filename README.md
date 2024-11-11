@@ -1,3 +1,13 @@
+![image](https://github.com/user-attachments/assets/6d874580-ef8a-4fa7-8b37-f04c9189f0d6)
+
+<h1 align="center"> Projeto Admin-template</h1>
+
+<h2> 🏗️ Em construção 🏗️</h2>
+
+O projeto Admin-template é sistema Administrativo. Nele será possível criar novos usuários por meio de email e senha ou através do google; Trocar o dark mode utilizando o local storage; Navegar entre páginas no estilo ReactJs.
+
+##
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
