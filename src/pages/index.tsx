@@ -1,7 +1,11 @@
+import Layout from "@/components/template/Layout";
+
 export default function Home() {
   return (
     <div>
-      <h1 className={`text-9xl text-green-600`}>Admin</h1>
+      <Layout titulo="Página inicial" subTitulo="Estamos construíndo um template Admin">
+        <h3>Conteúdo</h3>
+      </Layout>
     </div>
   );
 }
