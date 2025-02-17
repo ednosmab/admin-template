@@ -12,7 +12,7 @@ export default function MenuItem(props: MenuItemProps){
             <Link href={props.url}>
                 <div className={`flex flex-col justify-center items-center h-20 w-20`}>
                     {props.icone}
-                    <span className={`text-xl font-light text-gray-600`}>
+                    <span className={`text-xs font-light text-gray-600`}>
                         {props.texto}
                     </span>
                 </div>
