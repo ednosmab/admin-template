@@ -3,12 +3,12 @@ import { IconeAtencao, IconeGoogle } from "@/components/icons";
 import { useState } from "react";
 
 export default function Autenticacao(){
-    const [erro, setErro] = useState(null)
+    const [erro, setErro] = useState<string | null>(null)
     const [modo, setModo] = useState<'login' | 'cadastro'>('login')
     const [email, setEmail] = useState('')
     const [senha, setSenha] = useState('')
 
-    function exibirErro(msg, tempoEmSegundos = 1000){
+    function exibirErro(msg: string, tempoEmSegundos = 1000){
         setErro(msg)
         setTimeout(() => setErro(null), tempoEmSegundos * 5)
     }
