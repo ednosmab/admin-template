@@ -2,11 +2,12 @@
 import AuthInput from "@/components/auth/AuthInput";
 import { IconeAtencao, IconeGoogle } from "@/components/icons";
 import useAuth from "@/data/hook/useAuth";
-import { Router } from "next/router";
 import { useState } from "react";
 
 export default function Autenticacao(){
     const {usuario, loginGoogle} = useAuth()
+
+    console.log(usuario)
 
     const [erro, setErro] = useState<string | null>(null)
     const [modo, setModo] = useState<'login' | 'cadastro'>('login')
