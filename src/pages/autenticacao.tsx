@@ -1,8 +1,8 @@
-
 import AuthInput from "@/components/auth/AuthInput";
 import { IconeAtencao, IconeGoogle } from "@/components/icons";
 import useAuth from "@/data/hook/useAuth";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Autenticacao(){
     const {usuario, loginGoogle} = useAuth()
@@ -31,10 +31,13 @@ export default function Autenticacao(){
     return (
         <div className="flex h-screen items-center justify-center">
             <div className="hidden md:block w-1/2 lg:w-2/3">
-                <img 
-                    src="https://picsum.photos/1024" 
+
+                <Image
+                    src={"https://picsum.photos/1024"}
                     alt="Imagem da tela de autenticação"
-                    className="h-screen w-full object-cover" 
+                    className="h-screen w-full object-cover"
+                    width={1024}
+                    height={0} // a altura não está interferindo na renderização da imagem
                 />
             </div>
 
