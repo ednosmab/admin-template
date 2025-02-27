@@ -5,9 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function Autenticacao(){
-    const {usuario, loginGoogle} = useAuth()
-
-    console.log(usuario)
+    const {login, cadastrar, loginGoogle} = useAuth()
 
     const [erro, setErro] = useState<string | null>(null)
     const [modo, setModo] = useState<'login' | 'cadastro'>('login')
@@ -19,13 +17,18 @@ export default function Autenticacao(){
         setTimeout(() => setErro(null), tempoEmSegundos * 5)
     }
 
-    function submeter(){
-        if(modo === 'login'){
-            console.log('login')
-            exibirErro('Ocorreu um erro no login!')
-        }else{
-            console.log('cadastrar')
-            exibirErro('Ocorreu um erro no cadastro!')
+    async function submeter(){
+        try {
+            
+            if(modo === 'login'){
+                await login(email, senha)
+            }else{
+                await cadastrar(email, senha)
+            }
+            
+        } catch (error) {
+            console.log(error)
+            exibirErro(error.message)
         }
     }
     return (
